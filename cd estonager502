@@ -1,0 +1,28 @@
+{
+  "name": "investment-website",
+  "version": "1.0.0",
+  "description": "A comprehensive investment tracking and portfolio management website",
+  "main": "server/index.js",
+  "homepage": "https://estonager502-star.github.io/estonager502/",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "deploy": "npm run build && gh-pages -d client/build"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "axios": "^1.4.0",
+    "jsonwebtoken": "^9.0.0",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "concurrently": "^8.0.1",
+    "gh-pages": "^5.0.0"
+  }
+}
